@@ -1,0 +1,1 @@
+!function(e){$textimages_lightbox_config={selector:"a.lightbox",hash:!1,fullScreen:!1,actualSize:!1,getCaptionFromTitleOrAlt:!1,loop:!0,thumbnail:!0,showThumbByDefault:!1,fullScreen:!1,download:!1,autoplayControls:!0,exThumbImage:"data-exthumbimage"},e(".derralf__elements__textimages__element__elementtextimages").lightGallery($textimages_lightbox_config)}(jQuery);

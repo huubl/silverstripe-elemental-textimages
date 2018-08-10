@@ -1,0 +1,6 @@
+en:
+  Derralf\Elements\TextImages\Element\ElementTextImages:
+    ImagesTab: 'Images'
+    ImageViewMode: 'Image View Mode'
+    ImageViewModeEmptyString: 'Choose View Mode...'
+    ImageViewModeDescription: 'Options for displaying additional images:<br><ul><li>1. Depending on the selected template ("Settings" tab), the first image is displayed, e.g. to the left or right of text</li><li>2. Depending on the selected option, a minimum number of images should be stored</li><li>3. Depending on the selected option, not all stored images may be displayed</li><li>4. The images can be sorted by drag and drop</li></ul>'

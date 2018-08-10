@@ -1,0 +1,62 @@
+/* ==========================================================================
+   derralf/elemental-textimages
+   ========================================================================== */
+
+
+// some variables.
+// you may comment or change them when using this scss file in your workflow
+
+// $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+// $brand-success:         #5cb85c !default;
+// $brand-info:            #5bc0de !default;
+// $brand-warning:         #f0ad4e !default;
+// $brand-danger:          #d9534f !default;
+
+$font-size-base:          14px !default;
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$grid-gutter-width:         30px !default;
+
+// $screen-md:                  992px !default;
+// $screen-md-min:              $screen-md !default;
+// $screen-sm-max:              ($screen-md-min - 1) !default;
+
+
+.derralf__elements__textimages__element__elementtextimages {
+
+    .image-caption {
+        // color: $brand-primary;
+        // text-transform: uppercase;
+        margin: ($line-height-computed/2) 0;
+        font-style: italic;
+    }
+
+    .image-wrap-top + .text,
+    .image-wrap-top + h1,
+    .image-wrap-top + h2,
+    .image-wrap-top + h3 {
+        margin-top: $line-height-computed;
+    }
+
+    .image-wrap-below {
+        margin-top: $grid-gutter-width;
+        .image-below {
+            margin-bottom: $grid-gutter-width;
+        }
+    }
+
+    .image-wrap-right,
+    .image-wrap-left {
+        .image-aside {
+            margin-bottom: $line-height-computed;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a.lightbox {
+                display: block;
+                //@extend %hidden-gallery-wrapper;
+            }
+        }
+    }
+}
