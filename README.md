@@ -75,15 +75,8 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ```
 
 
-#### Rename Titles of the config maps in **mysite/\_config/mysite.yml**:
-
-```
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles:
-    OneRightFiftyFifty: "your new Title goes here"
-```
-
 #### Add Templates to the config maps in **mysite/\_config/mysite.yml**:
+This adds a new Entry at the beginnig of the styles dropdown:
 
 ```
 Derralf\Elements\TextImages\Element\ElementTextImages:
@@ -94,7 +87,36 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`
 
 
-##### Delete/reset Templates add your own in **mysite/\_config/mysite.yml**:
+#### Rename Titles of the config maps in **mysite/\_config/mysite.yml**:
+This renames an existing Entry and adds a new Entry at the end of the styles dropdown:
+
+```
+
+---
+After: elementaltextimages
+---
+Derralf\Elements\TextImages\Element\ElementTextImages:
+  styles:
+    OneRightFiftyFifty: "your new Title goes here"
+    MyCustomTemplate: "new customized special Layout"
+```
+
+
+##### Delete all Templates in **mysite/\_config/mysite.yml**:
+Removing all default styles from the styles dropdown will disable it:
+
+```
+
+---
+After: elementaltextimages
+---
+Derralf\Elements\TextImages\Element\ElementTextImages:
+  styles: null
+---
+```
+
+##### Delete/reset Templates and add your own in **mysite/\_config/mysite.yml**:
+If you want only your own templates available in the styles dropdown you have to reset the whole styles dropdown (remove all of my default styles/templates) and afterwards add your own styles like this:
 
 ```
 
