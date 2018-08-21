@@ -88,7 +88,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ```
 Derralf\Elements\TextImages\Element\ElementTextImages:
   styles:
-    MyCustomTemplate: "customized special Layout"
+    MyCustomTemplate: "new customized special Layout"
 ```
 
 ...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`
