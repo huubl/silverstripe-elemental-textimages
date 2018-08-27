@@ -11,6 +11,21 @@ A block that displays content with one or multiple Images.
 * jonom/focuspoint ^3.0
 * bummzack/sortablefile ^2.0
 
+## Suggestions
+* derralf/elemental-styling
+
+**Important**:
+
+In the templates I use`<% include Derralf\\Elements\\ElementTitleStyled %>`
+
+If you don't install/use the Module derralf/elemental-styling you have to add `Derralf/Elements/Includes/ElementTitleStyled.ss` to your Templates yourself or use your own templates.
+
+Example:  
+```
+<h2 class="element__title maybe_some_other_class">$Title</h2>
+```
+
+
 ## Installation
 
 - Install a module via Composer
