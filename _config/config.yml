@@ -16,6 +16,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
     OneLeft: "Bild links, 33%"
     OneTop: "Bild oben"
     OneTop3by1: "Bild oben, Format 3:1"
+  styles_default_description: ''
   image_view_modes:
       HiddenGallery: "versteckte Galerie"
       TwoBelow: "2 weitere Bilder unten, quer"

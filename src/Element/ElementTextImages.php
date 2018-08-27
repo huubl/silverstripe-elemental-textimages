@@ -8,6 +8,7 @@ use DNADesign\Elemental\Models\BaseElement;
 use Sheadawson\Linkable\Forms\LinkField;
 use Sheadawson\Linkable\Models\Link;
 use SilverStripe\Assets\Image;
+use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\Tab;
@@ -91,6 +92,15 @@ class ElementTextImages extends BaseElement
     {
         $this->beforeUpdateCMSFields(function ($fields) {
 
+
+            // Style: Description for default style (describes Layout thats used, when no special style is selected)
+            $Style = $fields->dataFieldByName('Style');
+            $StyleDefaultDescription = $this->owner->config()->get('styles_default_description', Config::UNINHERITED);
+            if ($Style && $StyleDefaultDescription) {
+                $Style->setDescription($StyleDefaultDescription);
+            }
+
+            // ReadMoreLink: use Linkfield
             $ReadMoreLink = LinkField::create('ReadMoreLinkID', 'Link');
             $fields->replaceField('ReadMoreLinkID', $ReadMoreLink);
 
@@ -119,6 +129,8 @@ class ElementTextImages extends BaseElement
                     $fields -> addFieldToTab('Root.ImagesTab', $ImageViewModeTemplateError);
                 }
             }
+
+
 
 
         });
