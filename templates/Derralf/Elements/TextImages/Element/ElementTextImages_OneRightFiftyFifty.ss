@@ -1,11 +1,9 @@
 
-<% require javascript('derralf/elemental-textimages: client/dist/js/lightgallery.init.js') %>
-
 <% if $SortedImages %>
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <% if $ShowTitle %>
-                <% include Derralf\\Elements\\ElementTitleStyled %>
+                <% include Derralf\\Elements\\TextImages\\Title %>
             <% end_if %>
 
             <% if $HTML %>

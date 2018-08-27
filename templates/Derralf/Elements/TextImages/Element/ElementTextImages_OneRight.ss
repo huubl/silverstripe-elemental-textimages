@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-8">
             <% if $ShowTitle %>
-                <% include Derralf\\Elements\\ElementTitleStyled %>
+                <% include Derralf\\Elements\\TextImages\\Title %>
             <% end_if %>
 
             <% if $HTML %>

@@ -1,5 +1,5 @@
     <% if $ShowTitle %>
-        <% include Derralf\\Elements\\ElementTitleStyled %>
+        <% include Derralf\\Elements\\TextImages\\Title %>
     <% end_if %>
 
     <% if $SortedImages %>

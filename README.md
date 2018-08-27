@@ -14,16 +14,7 @@ A block that displays content with one or multiple Images.
 ## Suggestions
 * derralf/elemental-styling
 
-**Important**:
-
-In the templates I use`<% include Derralf\\Elements\\ElementTitleStyled %>`
-
-If you don't install/use the Module derralf/elemental-styling you have to add `Derralf/Elements/Includes/ElementTitleStyled.ss` to your Templates yourself or use your own templates.
-
-Example:  
-```
-<h2 class="element__title maybe_some_other_class">$Title</h2>
-```
+Modify `/templates/Derralf/Elements/TextImages/Includes/Title.ss` to your needs when using StyledTitle from derralf/elemental-styling.
 
 
 ## Installation
