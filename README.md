@@ -19,7 +19,7 @@ Modify `/templates/Derralf/Elements/TextImages/Includes/Title.ss` to your needs 
 
 ## Installation
 
-- Install a module via Composer
+- Install the module via Composer
   ```
   composer require derralf/silverstripe-elemental-textimages
   ```
@@ -55,7 +55,13 @@ Templates based on Bootstrap 3+
 
 ## Configuration
 
-The Basic/default config:
+A Basic/default config.
+
+Note the options for `styles` and `image_view_modes`, in which the templates contained in the extension are listed.
+
+Set `defaults:ImageViewMode` to `null` or any of the avaiable Templates from `image_view_modes`.
+
+Optionally you may set `defaults:Style`to any of the available `styles`.
 
 ```
 Derralf\Elements\TextImages\Element\ElementTextImages:
@@ -81,7 +87,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ```
 
 
-#### Add Templates to the config maps in **mysite/\_config/mysite.yml**:
+#### Add Templates to the config maps in **mysite/\_config/elements.yml**:
 This adds a new Entry at the beginnig of the styles dropdown:
 
 ```
@@ -93,7 +99,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`
 
 
-#### Rename Titles of the config maps in **mysite/\_config/mysite.yml**:
+#### Rename Titles of the config maps in **mysite/\_config/elements.yml**:
 This renames an existing Entry and adds a new Entry at the end of the styles dropdown:
 
 ```
@@ -108,7 +114,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ```
 
 
-##### Delete all Templates in **mysite/\_config/mysite.yml**:
+##### Delete all Templates in **mysite/\_config/elements.yml**:
 Removing all default styles from the styles dropdown will disable it:
 
 ```
@@ -121,7 +127,7 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ---
 ```
 
-##### Delete/reset Templates and add your own in **mysite/\_config/mysite.yml**:
+##### Delete/reset Templates and add your own in **mysite/\_config/elements.yml**:
 If you want only your own templates available in the styles dropdown you have to reset the whole styles dropdown (remove all of my default styles/templates) and afterwards add your own styles like this:
 
 ```
