@@ -1,6 +1,6 @@
----
-Name: elementaltextimages
----
+#---
+#Name: elementaltextimages
+#---
 
 ## add default styles
 #DNADesign\Elemental\Controllers\ElementController:
@@ -8,22 +8,22 @@ Name: elementaltextimages
 #    - derralf/elemental-textimages:client/dist/styles/frontend-default.css
 
 # basic/default config
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles:
-    OneRightFiftyFifty: "Bild rechts, 50%"
-    OneLeftFiftyFifty: "Bild links, 50%"
-    OneRight: "Bild rechts, 33%"
-    OneLeft: "Bild links, 33%"
-    OneTop: "Bild oben"
-    OneTop3by1: "Bild oben, Format 3:1"
-  styles_default_description: ''
-  image_view_modes:
-      HiddenGallery: "versteckte Galerie"
-      TwoBelow: "2 weitere Bilder unten, quer"
-      TwoBelowSquare: "2 weitere Bilder unten, quadratisch"
-      ThreeBelow: "3 weitere Bilder unten"
-      FourBelow: "4 weitere Bilder unten (4 Spalten)"
-      AllBelow3Cols: "alle weiteren Bilder unten (3 Spalten)"
-  defaults:
-    ImageViewMode: 'TwoBelow'
-  readmore_link_class: 'btn btn-primary btn-readmore'
+#Derralf\Elements\TextImages\Element\ElementTextImages:
+#  styles:
+#    OneRightFiftyFifty: "Bild rechts, 50%"
+#    OneLeftFiftyFifty: "Bild links, 50%"
+#    OneRight: "Bild rechts, 33%"
+#    OneLeft: "Bild links, 33%"
+#    OneTop: "Bild oben"
+#    OneTop3by1: "Bild oben, Format 3:1"
+#  styles_default_description: ''
+#  image_view_modes:
+#      HiddenGallery: "versteckte Galerie"
+#      TwoBelow: "2 weitere Bilder unten, quer"
+#      TwoBelowSquare: "2 weitere Bilder unten, quadratisch"
+#      ThreeBelow: "3 weitere Bilder unten"
+#      FourBelow: "4 weitere Bilder unten (4 Spalten)"
+#      AllBelow3Cols: "alle weiteren Bilder unten (3 Spalten)"
+#  defaults:
+#    ImageViewMode: 'TwoBelow'
+#  readmore_link_class: 'btn btn-primary btn-readmore'

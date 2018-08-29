@@ -55,7 +55,7 @@ Templates based on Bootstrap 3+
 
 ## Configuration
 
-A Basic/default config.
+A basic/default config. Add this to your **mysite/\_config/elements.yml**
 
 Note the options for `styles` and `image_view_modes`, in which the templates contained in the extension are listed.
 
@@ -64,6 +64,10 @@ Set `defaults:ImageViewMode` to `null` or any of the avaiable Templates from `im
 Optionally you may set `defaults:Style`to any of the available `styles`.
 
 ```
+
+---
+Name: elementaltextimages
+---
 Derralf\Elements\TextImages\Element\ElementTextImages:
   styles:
     '': "Standard (kein Bild beim Text)"
@@ -86,9 +90,20 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
   readmore_link_class: 'btn btn-primary btn-readmore'
 ```
 
+Additionally you may apply the default styles:
 
-#### Add Templates to the config maps in **mysite/\_config/elements.yml**:
-This adds a new Entry at the beginnig of the styles dropdown:
+```
+# add default styles
+DNADesign\Elemental\Controllers\ElementController:
+  default_styles:
+    - derralf/elemental-textimages:client/dist/styles/frontend-default.css
+```
+
+See Elemental Docs for [how to disable the default styles](https://github.com/dnadesign/silverstripe-elemental#disabling-the-default-stylesheets).
+
+### Adding your own templates
+
+You may add your own templates/styles like this:
 
 ```
 Derralf\Elements\TextImages\Element\ElementTextImages:
@@ -96,60 +111,9 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
     MyCustomTemplate: "new customized special Layout"
 ```
 
-...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`
-
-
-#### Rename Titles of the config maps in **mysite/\_config/elements.yml**:
-This renames an existing Entry and adds a new Entry at the end of the styles dropdown:
-
-```
-
----
-After: elementaltextimages
----
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles:
-    OneRightFiftyFifty: "your new Title goes here"
-    MyCustomTemplate: "new customized special Layout"
-```
-
-
-##### Delete all Templates in **mysite/\_config/elements.yml**:
-Removing all default styles from the styles dropdown will disable it:
-
-```
-
----
-After: elementaltextimages
----
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles: null
----
-```
-
-##### Delete/reset Templates and add your own in **mysite/\_config/elements.yml**:
-If you want only your own templates available in the styles dropdown you have to reset the whole styles dropdown (remove all of my default styles/templates) and afterwards add your own styles like this:
-
-```
-
----
-Name: resetelementaltextimages
-After: elementaltextimages
----
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles: null
----
-After: resetelementaltextimages
----
-Derralf\Elements\TextImages\Element\ElementTextImages:
-  styles:
-    '': "default (No image next to text)"
-    StyleOne: 'One style'
-    StyleTwo: 'Other Style'
----
-```
-
-...and put your template in the appropriate folders.
+...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`  
+**and/or**
+add styles for `.derralf__elements__textimages__element__elementtextimages.mycustomtemplate` to your style sheet
 
 
 ## Screen Shots
