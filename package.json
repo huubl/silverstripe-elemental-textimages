@@ -4,7 +4,7 @@
   "author": "Jderralf",
   "private": true,
   "scripts": {
-    "postinstall": "touch node_modules/.metadata_never_index && touch node_modules/.gitkeep"
+    "postinstall": "touch node_modules/.metadata_never_index"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
