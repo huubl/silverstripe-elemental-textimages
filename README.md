@@ -25,34 +25,6 @@ Modify `/templates/Derralf/Elements/TextImages/Includes/Title.ss` to your needs 
   ```
 
 
-### Template Notes
-
-Templates based on Bootstrap 3+
-
-- Optionaly, you can require basic CSS stylings provided with this module to your controller class like:
-  **mysite/code/PageController.php**
-  ```
-      Requirements::css('derralf/elemental-textimages:client/dist/styles/frontend-default.css');
-  ```
-  or copy over and modify `client/src/styles/frontend-default.scss` in your theme scss
-
-- Images wrapped in link tags (optimized / with some data-attributes for [lightgallery](http://sachinchoolur.github.io/lightGallery/))   
-  Optionally you can require a basic default javascript (requires jQuery) and (if not already included in your theme) lightgallery (respect license!)
-  ```
-  Requirements::javascript('https://cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/js/lightgallery-all.js');
-  Requirements::css('https://cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/css/lightgallery.min.css');
-  Requirements::javascript('derralf/elemental-textimages: client/dist/js/lightgallery.init.js');
-  ```
-  ...or use any other lightbox script...
-
-- data-attributes in Image Links  
-  2 data-attributes are supplied in the templates:
-  - `data-sub-html="$Legend.ATT"` to optinally provide a caption for lightgallery
-  - `data-exthumbimage="$Me.Fill(96,76).Link"` to provide an thumbnail for lightgallery
-  
-  You may want to extend Image class with a "getLegend()" method or suitable db field
-  
-
 ## Configuration
 
 A basic/default config. Add this to your **mysite/\_config/elements.yml**
@@ -114,6 +86,33 @@ Derralf\Elements\TextImages\Element\ElementTextImages:
 ...and put a template named `ElementTextImages_MyCustomTemplate.ss`in `themes/{your_theme}/templates/Derralf/Elements/TextImages/Element/`  
 **and/or**
 add styles for `.derralf__elements__textimages__element__elementtextimages.mycustomtemplate` to your style sheet
+
+## Template Notes
+
+Included templates are based on Bootstrap 3+
+
+- Optionaly, you can require basic CSS stylings provided with this module to your controller class like:
+  **mysite/code/PageController.php**
+  ```
+      Requirements::css('derralf/elemental-textimages:client/dist/styles/frontend-default.css');
+  ```
+  or copy over and modify `client/src/styles/frontend-default.scss` in your theme scss
+
+- Images wrapped in link tags (optimized / with some data-attributes for [lightgallery](http://sachinchoolur.github.io/lightGallery/))   
+  Optionally you can require a basic default javascript (requires jQuery) and (if not already included in your theme) lightgallery (respect license!)
+  ```
+  Requirements::javascript('https://cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/js/lightgallery-all.js');
+  Requirements::css('https://cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/css/lightgallery.min.css');
+  Requirements::javascript('derralf/elemental-textimages: client/dist/js/lightgallery.init.js');
+  ```
+  ...or use any other lightbox script...
+
+- data-attributes in Image Links  
+  2 data-attributes are supplied in the templates:
+  - `data-sub-html="$Legend.ATT"` to optinally provide a caption for lightgallery
+  - `data-exthumbimage="$Me.Fill(96,76).Link"` to provide an thumbnail for lightgallery
+  
+  You may want to extend Image class with a "getLegend()" method or suitable db field
 
 
 ## Screen Shots
