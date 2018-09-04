@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Derralf\\Elements\\elemental-textimages\\": "src/"
+            "Derralf\\Elements\\TextImages\\": "src/"
         }
     }
 
