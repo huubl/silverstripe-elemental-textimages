@@ -111,7 +111,7 @@ class ElementTextImages extends BaseElement
             $fields->removeByName('Images');
             $Images = new SortableUploadField('Images', 'Images');
             $Images -> getValidator() -> setAllowedExtensions(array('jpg', 'gif', 'png'));
-            $Images -> setFolderName('content-images');
+            $Images -> setFolderName('element-images');
             $fields -> addFieldToTab('Root.ImagesTab', $Images);
 
 
