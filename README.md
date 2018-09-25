@@ -89,7 +89,7 @@ add styles for `.derralf__elements__textimages__element__elementtextimages.mycus
 
 ## Template Notes
 
-Included templates are based on Bootstrap 3+
+Included templates are based on Bootstrap 3+ but require extra/additional styling (see included stylesheet).
 
 - Optionaly, you can require basic CSS stylings provided with this module to your controller class like:
   **mysite/code/PageController.php**
