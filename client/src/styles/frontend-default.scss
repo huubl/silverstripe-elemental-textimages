@@ -33,6 +33,8 @@ $grid-gutter-width:         30px !default;
     }
 
     .image-wrap-top + .text,
+    .image-wrap-top + .element__content,
+    .image-wrap-top + .element__title,
     .image-wrap-top + h1,
     .image-wrap-top + h2,
     .image-wrap-top + h3 {
