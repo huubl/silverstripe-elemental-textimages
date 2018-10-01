@@ -61,4 +61,16 @@ $grid-gutter-width:         30px !default;
             }
         }
     }
+
+    // hidden gallery
+    .image-wrap .image-aside,
+    .image-wrap-top {
+        position: relative;
+    }
+    .image-wrap a .more-images {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-weight: 700;
+    }
 }
