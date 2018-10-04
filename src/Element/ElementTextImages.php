@@ -114,6 +114,13 @@ class ElementTextImages extends BaseElement
             $Images -> setFolderName('element-images');
             $fields -> addFieldToTab('Root.ImagesTab', $Images);
 
+            // ShowImageCaptions nach den Bildern
+            $ShowImageCaptions = $fields->dataFieldByName('ShowImageCaptions');
+            $ShowImageCaptions->setDescription(_t(__CLASS__ . '.ShowImageCaptionsDescription','Note: whether captions are displayed also depends on the templates'));
+            $fields->insertAfter('Images', $ShowImageCaptions);
+
+
+
 
             // ImageViewMode
             $image_view_modes = $this->config()->get('image_view_modes');

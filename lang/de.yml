@@ -4,4 +4,5 @@ de:
     ImageViewMode: 'Bild-Anzeigemodus'
     ImageViewModeEmptyString: 'Anzeigemodus wählen...'
     ImageViewModeDescription: 'Optionen für die Anzeige weiterer Bilder:<br><ul><li>1. Abhängig vom gewählten Template (Reiter "Settings") wird das erste Bild z.B. links oder rechts von Text angezeigt</li><li>2. Abhängig von der gewählten Option sollte eine Mindestanzahl an Bildern hinterlegt werden</li><li>3. Abhängig von der gewählten Option werden ggf. nicht alle hinterlegten Bilder angezeigt</li><li>4. Die Bilder können per Drag and Drop sortiert werden</li></ul>'
+    ShowImageCaptionsDescription: 'Hinweis: ob Bildunterschriften angezeigt werden ist auch abhängig von den Templates'
 
