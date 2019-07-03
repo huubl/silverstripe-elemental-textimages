@@ -23,7 +23,7 @@ Modify `/templates/Derralf/Elements/TextImages/Includes/Title.ss` to your needs 
 
 - Install the module via Composer
   ```
-  composer require derralf/silverstripe-elemental-textimages
+  composer require derralf/elemental-textimages
   ```
 
 
