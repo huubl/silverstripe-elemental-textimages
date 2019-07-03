@@ -5,11 +5,13 @@ A block that displays content with one or multiple Images.
 
 ## Requirements
 
-* SilverStripe ^4.2
-* dnadesign/silverstripe-elemental ^3.0
+* SilverStripe CMS ^4.3
+* dnadesign/silverstripe-elemental ^4.0
 * sheadawson/silverstripe-linkable ^2.0@dev
 * jonom/focuspoint ^3.0
 * bummzack/sortablefile ^2.0
+
+For a SilverStripe 4.2 and Elemental 3.x compatible version of this module, please see the [1.x release line](https://github.com/derralf/silverstripe-elemental-textimage/tree/1.0#readme).
 
 ## Suggestions
 * derralf/elemental-styling
