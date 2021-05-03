@@ -25,8 +25,7 @@
             "dev-master": "2.x-dev"
         },
         "expose": [
-            "client/dist",
-            "icons"
+            "client/dist"
         ]
     },
     "autoload": {

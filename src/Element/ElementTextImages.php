@@ -15,6 +15,7 @@ use SilverStripe\Forms\Tab;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\Requirements;
 use SilverStripe\View\SSViewer;
+use SilverStripe\View\ThemeResourceLoader;
 
 class ElementTextImages extends BaseElement
 {
@@ -187,11 +188,32 @@ class ElementTextImages extends BaseElement
         if(!$this->getOtherImagesTemplate()) {
             return false;
         }
-        $template = $this->getOtherImagesTemplate();
-        $template_exists = SSViewer::hasTemplate($template);
-        if($template_exists){
-            return $template;
+
+        // Check for Template in theme list
+        // see SSViewer::hasTemplate and SSViewer::get_themes
+
+        $test_template = $this->getOtherImagesTemplate();
+        $test_has_template = ThemeResourceLoader::inst()->findTemplate(
+            $test_template,
+            SSViewer::config()->uninherited('themes')
+        );
+        if ($test_has_template) {
+            return $test_has_template;
         }
+
+        // Support legacy behaviour
+        $test_has_template = ThemeResourceLoader::inst()->findTemplate(
+            $test_template,
+            SSViewer::config()->uninherited('theme')
+        );
+        return $test_has_template;
+
+
+       // $template = $this->getOtherImagesTemplate();
+       // $template_exists = SSViewer::hasTemplate($template);
+       // if($template_exists){
+       //     return $template;
+       // }
     }
 
 
